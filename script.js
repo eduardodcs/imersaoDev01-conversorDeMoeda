@@ -1,8 +1,9 @@
 
 var dataRetorno = new Date()
-var data = dataRetorno.getMonth() + "-" + dataRetorno.getDate() + "-" + dataRetorno.getFullYear()
+var dataURL = dataRetorno.getMonth() + "-" + dataRetorno.getDate() + "-" + dataRetorno.getFullYear()
+var dataExibir = dataRetorno.getDate() + "/" + dataRetorno.getMonth() + "/" + dataRetorno.getFullYear()
 
-var url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='" + data + "'&$format=json";
+var url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='" + dataURL + "'&$format=json";
 
 let request = new XMLHttpRequest();
 request.open('GET', url, true);
@@ -18,6 +19,11 @@ request.onload = function() {
         var html = "<p id='valor-cotacao'>Cotação Atual: R$ " + valores.cotacaoCompra + "</p>"
         var htmlCotacao = document.getElementById("valor-cotacao")
         htmlCotacao.innerHTML = html
+
+        var htmlData = '<p id="data-atual">Dia: ' + dataExibir + '</p>'
+        var htmlNewData = document.getElementById("data-atual")
+        htmlNewData.innerHTML = htmlData
+
 
         document.getElementById('btnConverter').disabled = false
     }

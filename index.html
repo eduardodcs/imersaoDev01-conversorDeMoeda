@@ -11,12 +11,16 @@
         Conversor de moedas
     </h1>
     <p class="page-subtitle">
-        Descubra os valores em reais R$ daquele seu sonho que está em dólar U$
+        Saudades daquela comprinha no Paraguai? <br>
+        Converta de U$ para R$ e confira se já está valendo a pena
     </p>
-    <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
-    <div class="valores">
+    <!--
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    -->
+        <div class="valores">
         <label for="valor-dolar">Valor em Dolares</label>
         <input type="number" id="valor-dolar" step="0.01" min="0,01" onkeypress="return event.charCode == 44 || event.charCode >= 48 && event.charCode <= 57">
+        <p id="data-atual">Dia: 00/00/0000</p>
         <p id="valor-cotacao">Cotação Atual: R$ 0,00 </p>
         <p id="valor-real">Valor em Reais: R$ 0,00</p>
         <button type="button" id="btnConverter" onclick="converter()" disabled="false">CONVERTER</button>
