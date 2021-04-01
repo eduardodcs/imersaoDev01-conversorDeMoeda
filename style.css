@@ -1,10 +1,10 @@
 body {
     font-family: 'Roboto Mono',monospace;
-    min-height: 400px;
+
     background-image: url('https://www.bonitoway.com.br/public/posts/paraguai_bonito_way_bonito_ms_a.jpg');
     background-color: #000000;
-    background-size: 100%;
-    background-position: center bottom;
+    background-size: 100% auto;
+    background-position: center top;
     background-repeat: no-repeat;
 }
 
