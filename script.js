@@ -1,7 +1,8 @@
 
 var dataRetorno = new Date()
-var dataURL = dataRetorno.getMonth() + "-" + dataRetorno.getDate() + "-" + dataRetorno.getFullYear()
-var dataExibir = dataRetorno.getDate() + "/" + dataRetorno.getMonth() + "/" + dataRetorno.getFullYear()
+var mes = parseInt(dataRetorno.getMonth()) + 1
+var dataURL = mes + "-" + dataRetorno.getDate() + "-" + dataRetorno.getFullYear()
+var dataExibir = dataRetorno.getDate() + "/" + mes + "/" + dataRetorno.getFullYear()
 
 var url = "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='" + dataURL + "'&$format=json";
 
