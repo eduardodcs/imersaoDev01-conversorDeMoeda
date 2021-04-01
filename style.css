@@ -34,3 +34,12 @@ position: absolute;
 top: 10px;
 right:10px;
 }
+
+.valores {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+input {
+    text-align: center;
+}

@@ -2,8 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="script.js"></script>
     <title>Imersão Dev - Aula 01</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -13,12 +11,21 @@
         Conversor de moedas
     </h1>
     <p class="page-subtitle">
-        Descubra os valores em dolar U$
+        Descubra os valores em reais R$ daquele seu sonho que está em dólar U$
     </p>
     <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    <div class="valores">
+        <label for="valor-dolar">Valor em Dolares</label>
+        <input type="number" id="valor-dolar" step="0.01" min="0,01" onkeypress="return event.charCode == 44 || event.charCode >= 48 && event.charCode <= 57">
+        <p id="valor-cotacao">Cotação Atual: R$ 0,00 </p>
+        <p id="valor-real">Valor em Reais: R$ 0,00</p>
+        <button type="button" id="btnConverter" onclick="converter()" disabled="false">CONVERTER</button>
+    </div>
 </div>
     <a href="https://alura.com.br/" target="_blank">
         <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-    </a>    
+    </a>
+
 </body>
+    <script type="text/javascript" src="script.js"></script>
 </html>
